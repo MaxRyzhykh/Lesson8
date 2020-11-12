@@ -11,5 +11,22 @@ public class Address {
         this.houseNumb = houseNumb;
     }
 
-    h
+    public String getCity() {
+        return city;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public int getHouseNumb() {
+        return houseNumb;
+    }
+
+    @Override
+    public String toString() {
+        return  "city= " + city +
+                ", street= " + street +
+                ", houseNumb= " + houseNumb;
+    }
 }

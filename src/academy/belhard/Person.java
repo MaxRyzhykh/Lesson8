@@ -30,4 +30,8 @@ public class Person {
                 ", lastName= " + lastName +
                 "  address: " + address + "\n";
     }
+
+    public Integer personGetHouseNumb(){
+        return this.getAddress().getHouseNumb();
+    }
 }

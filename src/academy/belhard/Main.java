@@ -36,27 +36,14 @@ public class Main {
         personList1.add(person6);
 
 
-//        List<Person> streamResult = personList1
-//                .stream()
-//                .filter(x -> x.getFirstName() != null && x.getLastName() != null && x.getAddress() != null)
-//                .collect(Collectors.toList());
-//        System.out.println(streamResult);
-
-
-        List<Person> streamResult = personList1
+        List<String> streamResult = personList1
                 .stream()
-                .sorted((p1, p2) -> p2.getAddress().getHouseNumb() - p1.getAddress().getHouseNumb())
+                .filter(x -> x.getFirstName() != null && x.getLastName() != null && x.getAddress() != null)
+                .sorted((p1, p2) -> p1.personGetHouseNumb() - p2.personGetHouseNumb())
+                .map(p -> p.toString())
                 .collect(Collectors.toList());
+
         System.out.println(streamResult);
-
-
-
-//        System.out.println(person1.toString());
-//        System.out.println(person2.toString());
-//        System.out.println(person3.toString());
-//        System.out.println(person4.toString());
-//        System.out.println(person5.toString());
-//        System.out.println(person6.toString());
 
     }
 }

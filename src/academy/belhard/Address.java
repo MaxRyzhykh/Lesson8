@@ -19,7 +19,7 @@ public class Address {
         return street;
     }
 
-    public int getHouseNumb() {
+    public int getHouseNumb(){
         return houseNumb;
     }
 
